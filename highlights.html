@@ -4,69 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taniti Highlights</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Tropical vibe bg */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="text-white font-sans bg-black/60 backdrop-blur-sm">
 
-  <!-- Navigation -->
-  <header class="bg-white shadow-md">
+  <!-- Header -->
+  <header class="bg-white/20 backdrop-blur-md text-white">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold">TANITI <span class="text-sm font-light">Your Personal Guide</span></div>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="highlights.html" class="text-blue-600 font-semibold">Highlights</a>
-        <a href="hotels.html" class="hover:text-blue-600">Hotels</a>
-        <a href="plan.html" class="hover:text-blue-600">Plan Your Visit</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact Us</a>
-        <a href="#" class="hover:text-blue-600">Search</a>
+      <div class="flex items-center space-x-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Island_icon.svg/512px-Island_icon.svg.png" alt="Taniti Logo" class="h-8 w-8">
+        <span class="text-xl font-bold">TANITI</span>
+        <span class="text-sm font-light ml-2">Your Personal Guide</span>
+      </div>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="highlights.html" class="underline text-yellow-300">Highlights</a>
+        <a href="hotels.html" class="hover:text-yellow-300">Hotels</a>
+        <a href="plan.html" class="hover:text-yellow-300">Plan Your Visit</a>
+        <a href="contact.html" class="hover:text-yellow-300">Contact Us</a>
       </nav>
     </div>
   </header>
 
-  <!-- Highlights Grid -->
-  <section class="max-w-6xl mx-auto py-12 px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="bg-white rounded shadow p-4 text-center">
-        <div class="bg-gray-300 h-40 flex items-center justify-center rounded mb-4">
-          <span class="text-gray-500">Image</span>
-        </div>
-        <h3 class="text-lg font-semibold mb-2">Hidden Treasures of the Island</h3>
-        <p class="text-sm text-gray-600 mb-4">From secret beaches to jungle waterfalls, Taniti is full of magic waiting to be discovered.</p>
-        <a href="#" class="text-blue-500 hover:underline">Read more</a>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white rounded shadow p-4 text-center">
-        <div class="bg-gray-300 h-40 flex items-center justify-center rounded mb-4">
-          <span class="text-gray-500">Image</span>
-        </div>
-        <h3 class="text-lg font-semibold mb-2">Cultural Journeys</h3>
-        <p class="text-sm text-gray-600 mb-4">Learn about Taniti’s heritage through ancient rituals, local legends, and traditional crafts.</p>
-        <a href="#" class="text-blue-500 hover:underline">Read more</a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded shadow p-4 text-center">
-        <div class="bg-gray-300 h-40 flex items-center justify-center rounded mb-4">
-          <span class="text-gray-500">Image</span>
-        </div>
-        <h3 class="text-lg font-semibold mb-2">Thrilling Adventures</h3>
-        <p class="text-sm text-gray-600 mb-4">Zipline through canopies, kayak through hidden caves, or climb to the island’s peak — thrill awaits.</p>
-        <a href="#" class="text-blue-500 hover:underline">Read more</a>
-      </div>
+  <!-- Highlight Cards -->
+  <section class="max-w-6xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Card 1: Hidden Treasures -->
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
+      <img src="https://images.unsplash.com/photo-1508264165352-258db2f5d8e0" alt="Hidden beach with waterfall" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-lg font-semibold mb-2">Hidden Treasures of the Island</h3>
+      <p class="text-sm text-gray-100 mb-4">From secret beaches to jungle waterfalls, Taniti is full of magic waiting to be discovered.</p>
+      <a href="#" class="text-yellow-300 hover:underline">Read more</a>
     </div>
+
+    <!-- Card 2: Cultural Journeys -->
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
+      <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb" alt="Island culture and ceremony" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-lg font-semibold mb-2">Cultural Journeys</h3>
+      <p class="text-sm text-gray-100 mb-4">Learn about Taniti’s heritage through ancient rituals, local legends, and traditional crafts.</p>
+      <a href="#" class="text-yellow-300 hover:underline">Read more</a>
+    </div>
+
+    <!-- Card 3: Thrilling Adventures -->
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Ziplining over island cliffs" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-lg font-semibold mb-2">Thrilling Adventures</h3>
+      <p class="text-sm text-gray-100 mb-4">Zipline through canopies, kayak through hidden caves, or climb to the island’s peak — thrill awaits.</p>
+      <a href="#" class="text-yellow-300 hover:underline">Read more</a>
+    </div>
+
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white mt-16 py-8 border-t">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-6 text-sm text-gray-600">
-      <div class="font-bold text-gray-800">Logo</div>
-      <div>Address<br>123 street<br>Taniti</div>
-      <div>555-555-5555</div>
-      <div><a href="#">Newsletter</a></div>
+  <footer class="bg-white/20 backdrop-blur-sm mt-16 py-8 text-sm text-white border-t border-white/30">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Island_icon.svg/512px-Island_icon.svg.png" alt="Taniti Logo" class="h-8 mb-2">
+        <p class="font-bold">Taniti</p>
+      </div>
+      <div>
+        <p>Address</p>
+        <p>123 Coconut Way</p>
+        <p>Taniti Island</p>
+      </div>
+      <div>
+        <p>555-555-5555</p>
+      </div>
+      <div><a href="#">Newsletter Signup</a></div>
       <div><a href="contact.html">Contact Us</a></div>
     </div>
-    <div class="mt-6 text-center text-gray-500 text-xs">
+    <div class="text-center mt-6 text-xs text-gray-100">
       <div class="flex justify-center space-x-4 mt-4">
         <a href="#" aria-label="Instagram">📸</a>
         <a href="#" aria-label="Facebook">📘</a>
