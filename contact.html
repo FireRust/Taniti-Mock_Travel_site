@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Taniti</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navigation -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">TANITI <span class="text-sm font-light">Your Personal Guide</span></div>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="highlights.html" class="hover:text-blue-600">Highlights</a>
+        <a href="hotels.html" class="hover:text-blue-600">Hotels</a>
+        <a href="plan.html" class="hover:text-blue-600">Plan Your Visit</a>
+        <a href="contact.html" class="text-blue-600 font-semibold">Contact Us</a>
+        <a href="#" class="hover:text-blue-600">Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold text-center mb-8">Contact Us</h1>
+    <form action="#" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          Name
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
+          id="name" name="name" type="text" placeholder="Your full name" required />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
+          id="email" name="email" type="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+          Message
+        </label>
+        <textarea
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
+          id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <button
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+          type="submit">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8 border-t mt-16">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-6 text-sm text-gray-600">
+      <div class="font-bold text-gray-800">Logo</div>
+      <div>Address<br>123 street<br>Taniti</div>
+      <div>555-555-5555</div>
+      <div><a href="#">Newsletter</a></div>
+      <div><a href="contact.html">Contact Us</a></div>
+    </div>
+    <div class="mt-6 text-center text-gray-500 text-xs">
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+      </div>
+      <p class="mt-4">&copy; 2024 Taniti Travel Guide. All rights reserved. | <a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Terms of Service</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
