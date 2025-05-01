@@ -41,27 +41,34 @@
     <div>
       <h1 class="text-3xl font-bold mb-4">Let’s Get in Touch</h1>
       <p class="text-black mb-6">Have a question about your trip to Taniti? Send us a message — we’re here to help!</p>
-      
-      <form action="confirmation.html" method="GET" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-black">
+
+      <form onsubmit="event.preventDefault(); window.location.href='confirmation.html';" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-black">
+
         <div class="mb-4">
           <label class="block text-black text-sm font-bold mb-2" for="name">Name</label>
           <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="name" type="text" placeholder="Your full name" required />
         </div>
+
         <div class="mb-4">
           <label class="block text-black text-sm font-bold mb-2" for="email">Email</label>
           <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="email" type="email" placeholder="you@example.com" required />
         </div>
+
         <div class="mb-6">
           <label class="block text-black text-sm font-bold mb-2" for="message">Message</label>
           <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="message" rows="5" placeholder="Your message here..." required></textarea>
         </div>
+
         <div class="flex items-center justify-center">
-          <button class="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">
+          <button type="submit" class="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline">
             Send Message
           </button>
         </div>
+
         <p class="text-xs text-black mt-4 text-center italic">We’ll never share your information. Ever.</p>
+
       </form>
+
     </div>
 
     <!-- FAQ -->
