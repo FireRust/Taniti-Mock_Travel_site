@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trip Confirmed - Taniti</title>
+  <title>Your Trip - Taniti</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -34,12 +34,12 @@
     </div>
   </header>
 
-  <!-- Confirmation Message -->
+  <!-- Confirmation -->
   <section class="text-center py-24 px-6">
-    <div class="max-w-2xl mx-auto bg-black/40 backdrop-blur-md p-8 rounded shadow border border-black">
-      <h1 class="text-3xl font-bold text-yellow-300 mb-4">Your Taniti Adventure Awaits!</h1>
+    <div class="max-w-2xl mx-auto backdrop-blur-md bg-white/30 p-8 rounded">
+      <h1 class="text-3xl font-bold text-yellow-300 mb-4">Your Taniti Adventure Is Booked!</h1>
       <p id="confirmation-msg" class="text-lg text-black mb-6">
-        Loading your personalized itinerary...
+        Loading your personalized details...
       </p>
       <a href="index.html" class="bg-yellow-300 text-black font-bold px-6 py-2 rounded hover:bg-yellow-400 transition inline-block">
         Go Home
@@ -50,44 +50,32 @@
   <!-- Footer -->
   <footer class="bg-white/20 backdrop-blur-sm py-8 text-sm text-black border-t border-black/30">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-      <div>
-        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2">
-        <p class="font-bold">Taniti</p>
-      </div>
-      <div>
-        <p>Address</p>
-        <p>123 Coconut Way</p>
-        <p>Taniti Island</p>
-      </div>
-      <div>
-        <p>555-555-5555</p>
-      </div>
+      <div><img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2"><p class="font-bold">Taniti</p></div>
+      <div><p>Address</p><p>123 Coconut Way</p><p>Taniti Island</p></div>
+      <div><p>555-555-5555</p></div>
       <div><a href="#">Newsletter Signup</a></div>
       <div><a href="contact.html">Contact Us</a></div>
     </div>
     <div class="text-center mt-6 text-xs text-black">
-      <p>&copy; 2024 Taniti Travel Guide. All rights reserved. | <a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Terms of Service</a></p>
+      <p>&copy; 2024 Taniti Travel Guide. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript: Generate Custom Confirmation Message -->
+  <!-- Confirmation Logic -->
   <script>
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name") || "Traveler";
-    const date = params.get("date") || "your scheduled arrival date";
+    const dateStart = params.get("dateStart") || "someday soon";
+    const dateEnd = params.get("dateEnd") || "someday later";
     const activities = params.getAll("activities");
 
-    const msgEl = document.getElementById("confirmation-msg");
-
-    const formattedActivities = activities.length
-      ? activities.map(act => act.replace("-", " ")).join(", ")
-      : "an unforgettable island experience";
-
-    msgEl.innerHTML = `
-      <strong>${name}</strong>, we're so excited to welcome you to Taniti on <strong>${date}</strong>!<br><br>
-      We've reserved the following experiences for you: <strong>${formattedActivities}</strong>.<br><br>
-      Get ready for sunshine, culture, and adventure — we can't wait to see you! 🌴✨
+    const confirmationText = `
+      <strong>${name}</strong>, we’re thrilled you’ll be joining us from <strong>${dateStart}</strong> to <strong>${dateEnd}</strong>!<br><br>
+      You’ve chosen: <strong>${activities.length ? activities.join(", ") : "a surprise-filled island adventure"}</strong>.<br><br>
+      Get ready for warm sun, island flavors, and unforgettable memories 🌺🌊
     `;
+
+    document.getElementById("confirmation-msg").innerHTML = confirmationText;
   </script>
 
 </body>

@@ -37,17 +37,22 @@
   <!-- Booking Form -->
   <section class="max-w-3xl mx-auto py-16 px-6">
     <h1 class="text-3xl font-bold text-center mb-4 text-yellow-300">Book Your Island Experience</h1>
-    <p class="text-center text-black mb-8">Fill out the form below to customize your Taniti adventure. We can't wait to welcome you!</p>
+    <p class="text-center text-black mb-8">Fill out the form below to customize your Taniti adventure. We can’t wait to welcome you!</p>
 
-    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-black text-black">
+    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="backdrop-blur-md bg-white/30 shadow-lg rounded px-8 pt-6 pb-8 border border-black text-black">
       <div class="mb-4">
-        <label class="block text-sm font-bold mb-2" for="name">Full Name</label>
+        <label class="block text-sm font-bold mb-2">Full Name</label>
         <input name="name" type="text" required placeholder="Jane Doe" class="w-full px-3 py-2 rounded border border-gray-400" />
       </div>
 
       <div class="mb-4">
-        <label class="block text-sm font-bold mb-2" for="date">Arrival Date</label>
-        <input name="date" type="date" required class="w-full px-3 py-2 rounded border border-gray-400" />
+        <label class="block text-sm font-bold mb-2">Arrival Date</label>
+        <input name="dateStart" type="date" required class="w-full px-3 py-2 rounded border border-gray-400" />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2">Departure Date</label>
+        <input name="dateEnd" type="date" required class="w-full px-3 py-2 rounded border border-gray-400" />
       </div>
 
       <div class="mb-6">
@@ -67,18 +72,11 @@
     </form>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (unchanged) -->
   <footer class="bg-white/20 backdrop-blur-sm py-8 text-sm text-black border-t border-black/30">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-      <div>
-        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2">
-        <p class="font-bold">Taniti</p>
-      </div>
-      <div>
-        <p>Address</p>
-        <p>123 Coconut Way</p>
-        <p>Taniti Island</p>
-      </div>
+      <div><img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2"><p class="font-bold">Taniti</p></div>
+      <div><p>Address</p><p>123 Coconut Way</p><p>Taniti Island</p></div>
       <div><p>555-555-5555</p></div>
       <div><a href="#">Newsletter Signup</a></div>
       <div><a href="contact.html">Contact Us</a></div>
@@ -88,18 +86,20 @@
     </div>
   </footer>
 
-  <!-- Redirect Script -->
+  <!-- JS Redirect -->
   <script>
     function handleBookingSubmit(event) {
       event.preventDefault();
       const form = document.getElementById("booking-form");
       const name = form.elements["name"].value.trim();
-      const date = form.elements["date"].value;
+      const dateStart = form.elements["dateStart"].value;
+      const dateEnd = form.elements["dateEnd"].value;
       const activities = [];
       form.querySelectorAll("input[name='activities']:checked").forEach(el => activities.push(el.value));
       const params = new URLSearchParams();
       params.append("name", name || "Traveler");
-      params.append("date", date);
+      params.append("dateStart", dateStart);
+      params.append("dateEnd", dateEnd);
       activities.forEach(act => params.append("activities", act));
       window.location.href = `plan-confirmation.html?${params.toString()}`;
     }
