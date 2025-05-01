@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* oceanic bg */
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -27,103 +27,51 @@
       <nav class="space-x-4 text-sm font-medium flex items-center gap-2">
         <a href="index.html" class="text-black hover:text-yellow-300 font-bold">Home</a>
         <a href="highlights.html" class="text-black hover:text-yellow-300 font-bold">Highlights</a>
-  	<a href="hotels.html" class="text-black hover:text-yellow-300 font-bold">Hotels</a>
-  	<a href="contact.html" class="text-black hover:text-yellow-300 font-bold">Contact Us</a>
-  	<a href="plan.html" class="bg-yellow-300 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition">Plan Your Visit</a>
+        <a href="hotels.html" class="text-black hover:text-yellow-300 font-bold">Hotels</a>
+        <a href="contact.html" class="text-black hover:text-yellow-300 font-bold">Contact Us</a>
+        <a href="plan.html" class="bg-yellow-300 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition">Plan Your Visit</a>
       </nav>
     </div>
   </header>
 
-  <!-- Welcome Section -->
-  <section class="max-w-6xl mx-auto py-12 px-6">
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <img src="https://images.unsplash.com/photo-1550399504-8953e1a6ac87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFjYXRpb258ZW58MHx8MHx8fDI%3D" alt="Island welcome view" class="w-full md:w-1/2 rounded shadow-lg">
-      <div class="md:w-1/2">
-        <h1 class="text-3xl font-bold mb-4">Welcome to Taniti!</h1>
-        <p class="text-black">
-          Taniti is more than just a destination — it’s an experience. Start planning your visit today with these unforgettable activities.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- Booking Form -->
+  <section class="max-w-3xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold text-center mb-4 text-yellow-300">Book Your Island Experience</h1>
+    <p class="text-center text-black mb-8">Fill out the form below to customize your Taniti adventure. We can't wait to welcome you!</p>
 
-  <!-- Three Column Section -->
-  <section class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
-
-    <!-- Adventure Tours -->
-    <div class="text-center bg-white/20 backdrop-blur-md p-4 rounded border border-black">
-      <img src="https://images.unsplash.com/photo-1465778893808-9b3d1b443be4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG91cnxlbnwwfHwwfHx8Mg%3D%3D" alt="Adventure tour" class="rounded mb-4 w-full h-40 object-cover">
-      <h2 class="text-xl font-semibold mb-2">Adventure Tours</h2>
-      <p class="text-sm text-black">Hike volcanic trails, explore marine life, or set off on a guided boat expedition.</p>
-    </div>
-
-    <!-- Local Cuisine -->
-    <div class="text-center bg-white/20 backdrop-blur-md p-4 rounded border border-black">
-      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="Island food" class="rounded mb-4 w-full h-40 object-cover">
-      <h2 class="text-xl font-semibold mb-2">Local Cuisine</h2>
-      <p class="text-sm text-black">Try fresh seafood, island curries, and coconut-infused desserts — all made with heart.</p>
-    </div>
-
-    <!-- Cultural Shows -->
-    <div class="text-center bg-white/20 backdrop-blur-md p-4 rounded border border-black">
-      <img src="https://images.unsplash.com/photo-1508642207-7048c482ba7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VsdHVyZXxlbnwwfHwwfHx8Mg%3D%3D" alt="Cultural show performance" class="rounded mb-4 w-full h-40 object-cover">
-      <h2 class="text-xl font-semibold mb-2">Cultural Shows</h2>
-      <p class="text-sm text-black">Every evening, the main square comes alive with drums, dances, and local legends retold by firelight.</p>
-    </div>
-
-  </section>
-  <!-- Plan Trip Form -->
-  <section class="max-w-4xl mx-auto mt-12 bg-white/20 backdrop-blur-md shadow rounded p-6 border border-black">
-    <h2 class="text-2xl font-bold mb-4 text-black">Book Your Taniti Experience</h2>
-    <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
-
-      <!-- Name -->
-      <div>
-        <label for="name" class="block text-sm font-semibold mb-1">Full Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-3 py-2 rounded border border-gray-400 focus:outline-none" />
+    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-black text-black">
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name">Full Name</label>
+        <input name="name" type="text" required placeholder="Jane Doe" class="w-full px-3 py-2 rounded border border-gray-400" />
       </div>
 
-      <!-- Email -->
-      <div>
-        <label for="email" class="block text-sm font-semibold mb-1">Email Address</label>
-        <input type="email" id="email" name="email" required class="w-full px-3 py-2 rounded border border-gray-400 focus:outline-none" />
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="date">Arrival Date</label>
+        <input name="date" type="date" required class="w-full px-3 py-2 rounded border border-gray-400" />
       </div>
 
-      <!-- Dates -->
-      <div>
-        <label for="nights" class="block text-sm font-semibold mb-1">When are you coming?</label>
-        <input type="date" id="start-date" name="start-date" />
-      </div>
-      <div>
-        <label for="nights" class="block text-sm font-semibold mb-1">When are you returning home?</label>
-        <input type="date" id="end-date" name="end-date" />
-      </div>
-
-      <!-- Activities -->
-      <div>
-        <label class="block text-sm font-semibold mb-1">Include in your experience:</label>
+      <div class="mb-6">
+        <label class="block text-sm font-bold mb-2">Choose Your Experiences</label>
         <div class="space-y-2">
-          <label><input type="checkbox" name="activities" value="adventure" /> Adventure Tours</label><br>
-          <label><input type="checkbox" name="activities" value="cuisine" /> Local Cuisine</label><br>
-          <label><input type="checkbox" name="activities" value="culture" /> Cultural Shows</label>
+          <label><input type="checkbox" name="activities" value="Adventure Tours" /> Adventure Tours</label><br>
+          <label><input type="checkbox" name="activities" value="Cultural Shows" /> Cultural Shows</label><br>
+          <label><input type="checkbox" name="activities" value="Local Cuisine" /> Local Cuisine</label>
         </div>
       </div>
 
-      <!-- Submit -->
-      <div class="md:col-span-2 text-center mt-4">
-        <button type="submit" class="bg-yellow-300 text-black font-bold px-6 py-2 rounded hover:bg-yellow-400 transition">
-          Reserve Now
+      <div class="text-center">
+        <button type="submit" class="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded">
+          Reserve Your Spot
         </button>
       </div>
     </form>
   </section>
 
-
   <!-- Footer -->
-  <footer class="bg-white/20 backdrop-blur-sm mt-16 py-8 text-sm text-black border-t border-black/30">
+  <footer class="bg-white/20 backdrop-blur-sm py-8 text-sm text-black border-t border-black/30">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
       <div>
-        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 w-8">
+        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2">
         <p class="font-bold">Taniti</p>
       </div>
       <div>
@@ -131,21 +79,31 @@
         <p>123 Coconut Way</p>
         <p>Taniti Island</p>
       </div>
-      <div>
-        <p>555-555-5555</p>
-      </div>
+      <div><p>555-555-5555</p></div>
       <div><a href="#">Newsletter Signup</a></div>
       <div><a href="contact.html">Contact Us</a></div>
     </div>
     <div class="text-center mt-6 text-xs text-black">
-      <div class="flex justify-center space-x-4 mt-4">
-        <a href="#" aria-label="Instagram">📸</a>
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="Twitter">🐦</a>
-      </div>
-      <p class="mt-4">&copy; 2024 Taniti Travel Guide. All rights reserved. | <a href="#" class="underline">Privacy Policy</a> | <a href="#" class="underline">Terms of Service</a></p>
+      <p>&copy; 2024 Taniti Travel Guide. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Redirect Script -->
+  <script>
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById("booking-form");
+      const name = form.elements["name"].value.trim();
+      const date = form.elements["date"].value;
+      const activities = [];
+      form.querySelectorAll("input[name='activities']:checked").forEach(el => activities.push(el.value));
+      const params = new URLSearchParams();
+      params.append("name", name || "Traveler");
+      params.append("date", date);
+      activities.forEach(act => params.append("activities", act));
+      window.location.href = `plan-confirmation.html?${params.toString()}`;
+    }
+  </script>
 
 </body>
 </html>
