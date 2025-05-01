@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Island shore background */
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -24,50 +24,72 @@
         <span class="text-xl font-bold">TANITI</span>
         <span class="text-sm font-light ml-2">Your Personal Guide</span>
       </div>
-      <nav class="space-x-4 text-sm font-medium">
+      <nav class="flex items-center gap-4 text-sm font-medium">
         <a href="index.html" class="hover:text-yellow-300">Home</a>
         <a href="highlights.html" class="hover:text-yellow-300">Highlights</a>
         <a href="hotels.html" class="hover:text-yellow-300">Hotels</a>
-        <a href="plan.html" class="hover:text-yellow-300">Plan Your Visit</a>
         <a href="contact.html" class="underline text-yellow-300">Contact Us</a>
+        <a href="plan.html" class="bg-yellow-300 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition">
+          Plan Your Visit
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- Contact Form -->
-  <section class="max-w-3xl mx-auto py-16 px-6">
-    <h1 class="text-3xl font-bold text-center mb-4">Let’s Get in Touch</h1>
-    <p class="text-center text-gray-100 mb-8">Have a question about your trip to Taniti? Send us a message — we’re here to help!</p>
-    <form action="#" method="POST" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-white">
+  <!-- Contact + FAQ Section -->
+  <section class="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+    
+    <!-- Contact Form -->
+    <div>
+      <h1 class="text-3xl font-bold mb-4">Let’s Get in Touch</h1>
+      <p class="text-gray-100 mb-6">Have a question about your trip to Taniti? Send us a message — we’re here to help!</p>
+      
+      <form action="#" method="POST" class="bg-white/20 backdrop-blur-md shadow-lg rounded px-8 pt-6 pb-8 border border-white">
+        <div class="mb-4">
+          <label class="block text-white text-sm font-bold mb-2" for="name">Name</label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="name" type="text" placeholder="Your full name" required />
+        </div>
+        <div class="mb-4">
+          <label class="block text-white text-sm font-bold mb-2" for="email">Email</label>
+          <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="mb-6">
+          <label class="block text-white text-sm font-bold mb-2" for="message">Message</label>
+          <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="message" rows="5" placeholder="Your message here..." required></textarea>
+        </div>
+        <div class="flex items-center justify-center">
+          <button class="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Send Message
+          </button>
+        </div>
+        <p class="text-xs text-gray-100 mt-4 text-center italic">We’ll never share your information. Ever.</p>
+      </form>
+    </div>
+
+    <!-- FAQ -->
+    <div class="bg-white/20 backdrop-blur-md p-6 rounded border border-white">
+      <h2 class="text-xl font-bold mb-4">FAQs</h2>
 
       <div class="mb-4">
-        <label class="block text-white text-sm font-bold mb-2" for="name">Name</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="name" type="text" placeholder="Your full name" required />
+        <p class="font-semibold text-yellow-300">How far is Taniti from the airport?</p>
+        <p class="text-sm text-white">About 45 minutes by shuttle or taxi from the mainland airport.</p>
       </div>
 
       <div class="mb-4">
-        <label class="block text-white text-sm font-bold mb-2" for="email">Email</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="email" type="email" placeholder="you@example.com" required />
+        <p class="font-semibold text-yellow-300">How do I make hotel reservations?</p>
+        <p class="text-sm text-white">Visit the Hotels page to book directly or call our 24/7 line.</p>
       </div>
 
-      <div class="mb-6">
-        <label class="block text-white text-sm font-bold mb-2" for="message">Message</label>
-        <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none" id="message" rows="5" placeholder="Your message here..." required></textarea>
-      </div>
+      <a href="#" class="inline-block mt-4 text-sm text-yellow-300 hover:underline">Click for more FAQs →</a>
+    </div>
 
-      <div class="flex items-center justify-center">
-        <button class="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">
-          Send Message
-        </button>
-      </div>
-    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white/20 backdrop-blur-sm mt-16 py-8 text-sm text-white border-t border-white/30">
+  <footer class="bg-white/20 backdrop-blur-sm py-8 text-sm text-white border-t border-white/30">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
       <div>
-        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 w-8">
+        <img src="images/taniti-logo.png" alt="Taniti Logo" class="h-8 mb-2">
         <p class="font-bold">Taniti</p>
       </div>
       <div>

@@ -24,12 +24,12 @@
         <span class="text-xl font-bold">TANITI</span>
         <span class="text-sm font-light ml-2">Your Personal Guide</span>
       </div>
-      <nav class="space-x-4 text-sm font-medium">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="highlights.html" class="underline text-yellow-300">Highlights</a>
-        <a href="hotels.html" class="hover:text-yellow-300">Hotels</a>
-        <a href="plan.html" class="hover:text-yellow-300">Plan Your Visit</a>
-        <a href="contact.html" class="hover:text-yellow-300">Contact Us</a>
+      <nav class="space-x-4 text-sm font-medium flex items-center gap-2">
+  	<a href="index.html" class="hover:text-yellow-300">Home</a>
+  	<a href="highlights.html" class="hover:text-yellow-300">Highlights</a>
+  	<a href="hotels.html" class="hover:text-yellow-300">Hotels</a>
+  	<a href="contact.html" class="hover:text-yellow-300">Contact Us</a>
+  	<a href="plan.html" class="bg-yellow-300 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition">Plan Your Visit</a>
       </nav>
     </div>
   </header>
@@ -38,26 +38,41 @@
   <section class="max-w-6xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
     
     <!-- Card 1: Hidden Treasures -->
-    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
-      <img src="https://images.unsplash.com/photo-1547822686-8ba163e1122a?q=80&w=2571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hidden beach with waterfall" class="rounded mb-4 w-full h-40 object-cover">
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white group relative">
+      <div class="relative overflow-hidden rounded mb-4">
+        <img src="https://images.unsplash.com/photo-1547822686-8ba163e1122a?q=80&w=2571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hidden Treasures" class="rounded w-full h-40 object-cover group-hover:brightness-75 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/60">
+          <span class="text-yellow-300 text-sm font-semibold">Sunset Cruise • 2hr boat tour</span>
+        </div>
+      </div>
       <h3 class="text-lg font-semibold mb-2">Hidden Treasures of the Island</h3>
       <p class="text-sm text-gray-100 mb-4">From secret beaches to jungle waterfalls, Taniti is full of magic waiting to be discovered.</p>
       <a href="#" class="text-yellow-300 hover:underline">Read more</a>
     </div>
 
     <!-- Card 2: Cultural Journeys -->
-    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
-      <img src="https://images.unsplash.com/photo-1533551268962-824e232f7ee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3VsdHVyZXxlbnwwfHwwfHx8Mg%3D%3D" alt="Island culture and ceremony" class="rounded mb-4 w-full h-40 object-cover">
-      <h3 class="text-lg font-semibold mb-2">Cultural Journeys</h3>
-      <p class="text-sm text-gray-100 mb-4">Learn about Taniti’s heritage through ancient rituals, local legends, and traditional crafts.</p>
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white group relative">
+      <div class="relative overflow-hidden rounded mb-4">
+        <img src="https://images.unsplash.com/photo-1533551268962-824e232f7ee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3VsdHVyZXxlbnwwfHwwfHx8Mg%3D%3D" alt="Hidden Treasures" class="rounded w-full h-40 object-cover group-hover:brightness-75 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/60">
+          <span class="text-yellow-300 text-sm font-semibold">Village Ceremony • Live music & food</span>
+        </div>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Hidden Treasures of the Island</h3>
+      <p class="text-sm text-gray-100 mb-4">From secret beaches to jungle waterfalls, Taniti is full of magic waiting to be discovered.</p>
       <a href="#" class="text-yellow-300 hover:underline">Read more</a>
     </div>
 
     <!-- Card 3: Thrilling Adventures -->
-    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white">
-      <img src="https://images.unsplash.com/photo-1489914169085-9b54fdd8f2a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWR2ZW50dXJlfGVufDB8fDB8fHwy" alt="Ziplining over island cliffs" class="rounded mb-4 w-full h-40 object-cover">
-      <h3 class="text-lg font-semibold mb-2">Thrilling Adventures</h3>
-      <p class="text-sm text-gray-100 mb-4">Zipline through canopies, kayak through hidden caves, or climb to the island’s peak — thrill awaits.</p>
+    <div class="bg-white/20 backdrop-blur-md rounded shadow p-4 text-center border border-white group relative">
+      <div class="relative overflow-hidden rounded mb-4">
+        <img src="https://images.unsplash.com/photo-1489914169085-9b54fdd8f2a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWR2ZW50dXJlfGVufDB8fDB8fHwy" alt="Hidden Treasures" class="rounded w-full h-40 object-cover group-hover:brightness-75 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/60">
+          <span class="text-yellow-300 text-sm font-semibold">Volcano Hike • 3hr guided trek</span>
+        </div>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Hidden Treasures of the Island</h3>
+      <p class="text-sm text-gray-100 mb-4">From secret beaches to jungle waterfalls, Taniti is full of magic waiting to be discovered.</p>
       <a href="#" class="text-yellow-300 hover:underline">Read more</a>
     </div>
 
