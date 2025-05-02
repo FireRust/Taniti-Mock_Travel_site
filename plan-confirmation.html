@@ -67,21 +67,29 @@
   </footer>
 
   <!-- Confirmation Logic -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name") || "Traveler";
-    const dateStart = params.get("dateStart") || "someday soon";
-    const dateEnd = params.get("dateEnd") || "someday later";
-    const activities = params.getAll("activities");
+      <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name") || "Traveler";
+        const dateStart = params.get("dateStart") || "someday soon";
+        const dateEnd = params.get("dateEnd") || "someday later";
+        const hotel = params.get("hotel");
+        const activities = params.getAll("activities");
 
-    const confirmationText = `
-      <strong>${name}</strong>, we’re thrilled you’ll be joining us from <strong>${dateStart}</strong> to <strong>${dateEnd}</strong>!<br><br>
-      You’ve chosen: <strong>${activities.length ? activities.join(", ") : "a surprise-filled island adventure"}</strong>.<br><br>
-      Get ready for warm sun, island flavors, and unforgettable memories 🌺🌊
-    `;
+        let confirmationText = `
+          <strong>${name}</strong>, we’re thrilled you’ll be joining us from <strong>${dateStart}</strong> to <strong>${dateEnd}</strong>!<br><br>
+        `;
 
-    document.getElementById("confirmation-msg").innerHTML = confirmationText;
-  </script>
+        if (hotel) {
+          confirmationText += `You’ll be staying at <strong>${hotel}</strong>.<br><br>`;
+        }
+
+        confirmationText += `
+          You’ve chosen: <strong>${activities.length ? activities.join(", ") : "a surprise-filled island adventure"}</strong>.<br><br>
+          Get ready for warm sun, island flavors, and unforgettable memories 🌺🌊
+        `;
+
+        document.getElementById("confirmation-msg").innerHTML = confirmationText;
+      </script>
 
 </body>
 </html>
