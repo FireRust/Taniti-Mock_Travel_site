@@ -31,3 +31,9 @@ This project works out-of-the-box on GitHub Pages:
    git add .
    git commit -m "Final build of Taniti site 🌴"
    git push origin main
+
+---
+
+## Design & Wireframes
+This project was built from my own UX wireframes, which you can see here:  
+➡️ https://github.com/FireRust/Wireframes
