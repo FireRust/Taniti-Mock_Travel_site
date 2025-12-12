@@ -34,6 +34,6 @@ This project works out-of-the-box on GitHub Pages:
 
 ---
 
-## Design & Wireframes
+## 🧩 Design & Wireframes
 This project was built from my own UX wireframes, which you can see here:  
 ➡️ https://github.com/FireRust/Wireframes
